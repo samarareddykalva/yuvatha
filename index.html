@@ -2,7 +2,20 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Yuvatha Creations</title>
+
+<!-- ✅ SEO META TAGS (EXACT & STANDARD) -->
+<title>Yuvatha Creations | Portfolio & YouTube Channel</title>
+<meta name="description" content="Yuvatha Creations – Portfolio of a Microsoft Dynamics 365 & Power Platform Developer. Explore projects, skills, and YouTube content on career guidance, development, and creativity.">
+<meta name="keywords" content="Yuvatha Creations, Dynamics 365 Developer, Power Platform, Power Automate, Portfolio Website, YouTube Creator, Career Guidance">
+<meta name="author" content="Yuvatha Creations">
+<meta name="robots" content="index, follow">
+
+<!-- Social SEO -->
+<meta property="og:title" content="Yuvatha Creations">
+<meta property="og:description" content="Developer | Designer | YouTuber | Career Guidance">
+<meta property="og:type" content="website">
+<meta property="og:image" content="profile.jpg">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -17,7 +30,7 @@
 }
 
 .light {
-  --bg: linear-gradient(135deg,#f7fffb,#e6fff3);
+  --bg: linear-gradient(135deg,#ffffff,#e6fff3);
   --card: #ffffff;
   --text: #063325;
   --accent: #1dbf73;
@@ -62,6 +75,7 @@ body{
 
 /* Header */
 header{
+  position:relative;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -95,42 +109,54 @@ header p{
   font-size:15px;
 }
 
-/* Toggle switch */
+/* ===== TOGGLE FIXED INSIDE HEADER ===== */
 .toggle-wrap{
-  position:fixed;
-  bottom:20px;
-  left:20px;
+  position:absolute;
+  top:20px;
+  right:20px;
+  z-index:1000;
 }
+
 .switch{
   position:relative;
-  width:55px;
-  height:28px;
+  width:62px;
+  height:32px;
 }
-.switch input{display:none}
+
+.switch input{
+  display:none;
+}
+
 .slider{
   position:absolute;
   inset:0;
-  background:#ccc;
-  border-radius:30px;
+  background:linear-gradient(135deg,#ffffff,#ccffe6);
+  border-radius:50px;
   cursor:pointer;
-  transition:.4s;
+  transition:0.4s;
+  box-shadow:0 0 20px rgba(0,255,170,0.9);
+  border:2px solid #1aff9c;
 }
+
 .slider:before{
   content:"";
   position:absolute;
-  height:22px;
-  width:22px;
-  left:3px;
-  bottom:3px;
-  background:white;
+  height:24px;
+  width:24px;
+  left:4px;
+  bottom:4px;
+  background:#0b2e22;
   border-radius:50%;
-  transition:.4s;
+  transition:0.4s;
 }
+
 input:checked + .slider{
-  background:var(--accent);
+  background:linear-gradient(135deg,#00ff9c,#00c896);
 }
+
 input:checked + .slider:before{
-  transform:translateX(26px);
+  transform:translateX(28px);
+  background:#ffffff;
 }
 
 /* Tabs */
@@ -179,15 +205,6 @@ input:checked + .slider:before{
   margin-bottom:25px;
   border:1px solid var(--border);
   box-shadow:0 15px 30px rgba(0,0,0,.4);
-  transition:.3s;
-}
-.card:hover{transform:translateY(-6px)}
-
-/* Lists */
-ul{list-style:none;padding:0}
-ul li{
-  padding:10px 0;
-  border-bottom:1px solid var(--border);
 }
 
 /* Skill bars */
@@ -204,19 +221,6 @@ ul li{
   background:linear-gradient(90deg,var(--accent),#00ffcc);
 }
 
-/* Video */
-.video{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  flex-wrap:wrap;
-}
-.video a{
-  color:var(--accent);
-  font-weight:600;
-  text-decoration:none;
-}
-
 /* Buttons */
 .btn{
   display:inline-block;
@@ -228,19 +232,6 @@ ul li{
   font-weight:600;
 }
 
-/* WhatsApp */
-.whatsapp{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25d366;
-  color:#000;
-  padding:14px 18px;
-  border-radius:50%;
-  text-decoration:none;
-  box-shadow:0 0 20px rgba(0,0,0,.6);
-}
-
 /* Footer */
 footer{
   text-align:center;
@@ -249,7 +240,6 @@ footer{
   color:#7fffd4;
 }
 
-/* Mobile */
 @media(max-width:768px){
   header h1{font-size:26px;white-space:normal}
 }
@@ -270,6 +260,14 @@ footer{
 <h1>YUVATHA CREATIONS</h1>
 <p>Developer | Editor | Designer | Career Guidance</p>
 </div>
+
+<!-- TOGGLE -->
+<div class="toggle-wrap">
+<label class="switch">
+<input type="checkbox" onchange="toggleTheme()">
+<span class="slider"></span>
+</label>
+</div>
 </header>
 
 <div class="tabs">
@@ -277,21 +275,17 @@ footer{
 <button class="tabBtn" onclick="openTab('youtube',this)">YouTube Channel</button>
 </div>
 
-<!-- PORTFOLIO (ALL CONTENT KEPT) -->
 <div id="portfolio" class="content active">
-
 <div class="card">
 <h2>👤 About Me</h2>
 <p>
 Microsoft Dynamics 365 & Power Platform Developer with 3.6+ years of industry experience 🚀
 <br><br>
-I specialize in Dynamics 365 CE, Power Automate, and Microsoft Power Platform, building smart CRM solutions that streamline business processes and boost efficiency.
+I specialize in Dynamics 365 CE, Power Automate, and Microsoft Power Platform.
 <br><br>
-🎓 Career guidance for students & working professionals  
-📸 Photography & creativity  
-💡 Real-world industry insights  
-<br><br>
-Contact Details:<br>
+🎓 Career guidance<br>
+📸 Photography<br>
+💡 Industry insights<br><br>
 Email : samarareddykalva@gmail.com
 </p>
 </div>
@@ -302,44 +296,15 @@ Email : samarareddykalva@gmail.com
 <p>Power Platform</p><div class="bar"><span style="width:85%"></span></div>
 <p>Power Automate</p><div class="bar"><span style="width:80%"></span></div>
 </div>
-
-<div class="card">
-<h2>🏆 Projects</h2>
-<ul>
-<li>Doing Client Projects as D365 Developer</li>
-<li>YouTube Video Creator</li>
-<li>Master Trainer for D365 Beginners</li>
-</ul>
 </div>
 
-</div>
-
-<!-- YOUTUBE (KEPT) -->
 <div id="youtube" class="content">
-
 <div class="card">
 <h2>▶️ Featured Video</h2>
-<iframe width="100%" height="315"
-src="https://www.youtube.com/embed/tHnEqO__cM4"
-allowfullscreen></iframe>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/tHnEqO__cM4" allowfullscreen></iframe>
 <br><br>
 <a href="https://www.youtube.com" class="btn" target="_blank">Subscribe</a>
 </div>
-
-<div class="card video">
-<span>☮️ The Peace from kerala</span>
-<a href="https://youtu.be/tHnEqO__cM4?si=iEgbVYiPmHZwFO1J" target="_blank">Watch Now</a>
-</div>
-
-</div>
-
-<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp">WA</a>
-
-<div class="toggle-wrap">
-<label class="switch">
-<input type="checkbox" onchange="toggleTheme()">
-<span class="slider"></span>
-</label>
 </div>
 
 <footer>© 2026 Yuvatha Creations | All Rights Reserved</footer>
