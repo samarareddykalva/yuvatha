@@ -2,21 +2,19 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<title>Yuvatha Creations | Dynamics 365 & Career Guidance</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- ✅ SEO META TAGS (EXACT & STANDARD) -->
-<title>Yuvatha Creations | Portfolio & YouTube Channel</title>
-<meta name="description" content="Yuvatha Creations – Portfolio of a Microsoft Dynamics 365 & Power Platform Developer. Explore projects, skills, and YouTube content on career guidance, development, and creativity.">
-<meta name="keywords" content="Yuvatha Creations, Dynamics 365 Developer, Power Platform, Power Automate, Portfolio Website, YouTube Creator, Career Guidance">
-<meta name="author" content="Yuvatha Creations">
+<!-- SEO META TAGS -->
+<meta name="description" content="Yuvatha Creations by Samara Reddy – Dynamics 365 & Power Platform Developer. Career guidance, CRM tutorials, real-world industry insights, and creative YouTube content.">
+<meta name="keywords" content="Yuvatha Creations, Dynamics 365 Developer, Power Platform, Career Guidance, CRM Developer, Samara Reddy, YouTube Tech Channel">
+<meta name="author" content="Samara Simha Reddy Kalva">
 <meta name="robots" content="index, follow">
 
-<!-- Social SEO -->
+<!-- Open Graph (Google + Social Preview) -->
 <meta property="og:title" content="Yuvatha Creations">
-<meta property="og:description" content="Developer | Designer | YouTuber | Career Guidance">
+<meta property="og:description" content="Learn • Build • Inspire | Dynamics 365 | Power Platform | Career Guidance">
 <meta property="og:type" content="website">
-<meta property="og:image" content="profile.jpg">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 
@@ -30,7 +28,7 @@
 }
 
 .light {
-  --bg: linear-gradient(135deg,#ffffff,#e6fff3);
+  --bg: linear-gradient(135deg,#f7fffb,#e6fff3);
   --card: #ffffff;
   --text: #063325;
   --accent: #1dbf73;
@@ -45,7 +43,7 @@ body{
   transition:.4s;
 }
 
-/* Scroll bar */
+/* Progress bar */
 #progressBar{
   position:fixed;
   top:0;left:0;
@@ -75,88 +73,74 @@ body{
 
 /* Header */
 header{
-  position:relative;
   display:flex;
   align-items:center;
-  justify-content:center;
-  gap:22px;
-  padding:40px 20px;
-  flex-wrap:wrap;
+  justify-content:space-between;
+  padding:25px 30px;
   background:radial-gradient(circle at top,#0f3d2e,#020202);
+  position:relative;
 }
 .light header{
   background:linear-gradient(135deg,#eafff6,#c8f5e1);
 }
 
+.header-left{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+
 .profile-pic{
-  width:85px;
-  height:85px;
+  width:80px;
+  height:80px;
   border-radius:50%;
   border:3px solid var(--accent);
   box-shadow:0 0 18px rgba(60,255,176,.6);
 }
 
 header h1{
-  font-size:42px;
+  font-size:36px;
   margin:0;
   font-weight:800;
   letter-spacing:3px;
-  white-space:nowrap;
   text-shadow:0 0 15px rgba(60,255,176,.6);
 }
+
 header p{
-  margin-top:6px;
-  font-size:15px;
+  margin:4px 0 0;
+  font-size:14px;
 }
 
-/* ===== TOGGLE FIXED INSIDE HEADER ===== */
-.toggle-wrap{
-  position:absolute;
-  top:20px;
-  right:20px;
-  z-index:1000;
-}
-
+/* Toggle */
 .switch{
   position:relative;
-  width:62px;
-  height:32px;
+  width:55px;
+  height:28px;
 }
-
-.switch input{
-  display:none;
-}
-
+.switch input{display:none}
 .slider{
   position:absolute;
   inset:0;
-  background:linear-gradient(135deg,#ffffff,#ccffe6);
-  border-radius:50px;
+  background:#ccc;
+  border-radius:30px;
   cursor:pointer;
-  transition:0.4s;
-  box-shadow:0 0 20px rgba(0,255,170,0.9);
-  border:2px solid #1aff9c;
 }
-
 .slider:before{
   content:"";
   position:absolute;
-  height:24px;
-  width:24px;
-  left:4px;
-  bottom:4px;
-  background:#0b2e22;
+  height:22px;
+  width:22px;
+  left:3px;
+  bottom:3px;
+  background:white;
   border-radius:50%;
-  transition:0.4s;
+  transition:.4s;
 }
-
 input:checked + .slider{
-  background:linear-gradient(135deg,#00ff9c,#00c896);
+  background:var(--accent);
 }
-
 input:checked + .slider:before{
-  transform:translateX(28px);
-  background:#ffffff;
+  transform:translateX(26px);
 }
 
 /* Tabs */
@@ -164,7 +148,7 @@ input:checked + .slider:before{
   display:flex;
   justify-content:center;
   gap:15px;
-  padding:16px;
+  padding:18px;
   flex-wrap:wrap;
 }
 .tabs button{
@@ -174,7 +158,6 @@ input:checked + .slider:before{
   background:var(--card);
   color:var(--text);
   cursor:pointer;
-  transition:.3s;
 }
 .tabs button.active{
   background:var(--accent);
@@ -188,13 +171,8 @@ input:checked + .slider:before{
   max-width:1000px;
   margin:auto;
   padding:30px;
-  animation:fade .5s;
 }
 .content.active{display:block}
-@keyframes fade{
-  from{opacity:0;transform:translateY(10px)}
-  to{opacity:1;transform:none}
-}
 
 /* Cards */
 .card{
@@ -221,7 +199,19 @@ input:checked + .slider:before{
   background:linear-gradient(90deg,var(--accent),#00ffcc);
 }
 
-/* Buttons */
+/* Video */
+.video{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+}
+.video a{
+  color:var(--accent);
+  font-weight:600;
+}
+
+/* Button */
 .btn{
   display:inline-block;
   padding:12px 30px;
@@ -232,16 +222,11 @@ input:checked + .slider:before{
   font-weight:600;
 }
 
-/* Footer */
 footer{
   text-align:center;
   padding:20px;
   background:#000;
   color:#7fffd4;
-}
-
-@media(max-width:768px){
-  header h1{font-size:26px;white-space:normal}
 }
 </style>
 </head>
@@ -251,31 +236,32 @@ footer{
 <div id="progressBar"></div>
 
 <div class="marquee">
-<span>✨ Welcome to my channel – Yuvatha Creations | Learn • Build • Inspire ✨</span>
+  <span>✨ Welcome to my channel – Yuvatha Creations | Learn • Build • Inspire ✨</span>
 </div>
 
 <header>
-<img src="Picsart_24-11-27_00-31-02-678.jpg" class="profile-pic">
-<div>
-<h1>YUVATHA CREATIONS</h1>
-<p>Developer | Editor | Designer | Career Guidance</p>
-</div>
+  <div class="header-left">
+    <img src="profile.jpg" class="profile-pic">
+    <div>
+      <h1>YUVATHA CREATIONS</h1>
+      <p>Developer | Editor | Designer | Career Guidance</p>
+    </div>
+  </div>
 
-<!-- TOGGLE -->
-<div class="toggle-wrap">
-<label class="switch">
-<input type="checkbox" onchange="toggleTheme()">
-<span class="slider"></span>
-</label>
-</div>
+  <label class="switch">
+    <input type="checkbox" onchange="toggleTheme()">
+    <span class="slider"></span>
+  </label>
 </header>
 
 <div class="tabs">
-<button class="tabBtn active" onclick="openTab('portfolio',this)">My Portfolio</button>
-<button class="tabBtn" onclick="openTab('youtube',this)">YouTube Channel</button>
+  <button class="tabBtn active" onclick="openTab('portfolio',this)">My Portfolio</button>
+  <button class="tabBtn" onclick="openTab('youtube',this)">YouTube Channel</button>
 </div>
 
+<!-- PORTFOLIO -->
 <div id="portfolio" class="content active">
+
 <div class="card">
 <h2>👤 About Me</h2>
 <p>
@@ -283,9 +269,6 @@ Microsoft Dynamics 365 & Power Platform Developer with 3.6+ years of industry ex
 <br><br>
 I specialize in Dynamics 365 CE, Power Automate, and Microsoft Power Platform.
 <br><br>
-🎓 Career guidance<br>
-📸 Photography<br>
-💡 Industry insights<br><br>
 Email : samarareddykalva@gmail.com
 </p>
 </div>
@@ -296,15 +279,47 @@ Email : samarareddykalva@gmail.com
 <p>Power Platform</p><div class="bar"><span style="width:85%"></span></div>
 <p>Power Automate</p><div class="bar"><span style="width:80%"></span></div>
 </div>
+
+<div class="card">
+<h2>🏆 Projects</h2>
+<ul>
+<li>Doing Client Projects as D365 Developer</li>
+<li>YouTube Video Creator</li>
+<li>Master Trainer for D365 Beginners</li>
+</ul>
 </div>
 
+<!-- TOPMATE QR -->
+<div class="card" style="text-align:center;">
+<h2>📅 Book a 1:1 Session</h2>
+<p>Scan the QR code below to book a personal guidance session</p>
+
+<img
+src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https://topmate.io/samara_simha_reddy_kalva/"
+style="width:220px;background:#fff;padding:12px;border-radius:18px;box-shadow:0 0 25px rgba(0,255,170,.9);"
+>
+
+<br><br>
+<a href="https://topmate.io/samara_simha_reddy_kalva/" target="_blank" class="btn">
+Book Slot on Topmate
+</a>
+</div>
+
+</div>
+
+<!-- YOUTUBE -->
 <div id="youtube" class="content">
+
 <div class="card">
 <h2>▶️ Featured Video</h2>
 <iframe width="100%" height="315" src="https://www.youtube.com/embed/tHnEqO__cM4" allowfullscreen></iframe>
-<br><br>
-<a href="https://www.youtube.com" class="btn" target="_blank">Subscribe</a>
 </div>
+
+<div class="card video">
+<span>☮️ The Peace from kerala</span>
+<a href="https://youtu.be/tHnEqO__cM4?si=iEgbVYiPmHZwFO1J" target="_blank">Watch Now</a>
+</div>
+
 </div>
 
 <footer>© 2026 Yuvatha Creations | All Rights Reserved</footer>
